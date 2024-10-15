@@ -1,0 +1,7 @@
+.layout-bg{
+  background-color: #e5e5f774;
+    background-image: linear-gradient(#444df774 1.4000000000000001px, transparent 1.4000000000000001px),
+    linear-gradient(to right, #444df774 1.4000000000000001px, #e5e5f78c 1.4000000000000001px);
+    background-size: 28px 28px;
+    height: 100vh;
+}

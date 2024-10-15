@@ -1,3 +1,39 @@
-<h1>Hero Header</h1>
-<router-outlet></router-outlet>
-<h1>Hero Footer</h1>
+<mat-sidenav-container fullscreen>
+  <!-- sidenav -->
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
+    <mat-toolbar color="primary">
+      <span>Menu</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list class="p-2">
+      <mat-list-item
+        *ngFor="let item of sidenavItems"
+        [routerLink]="item.url"
+        (click)="sidenav.toggle()"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        {{ item.label }}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Layot toolbar -->
+  <mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-button (click)="sidenav.toggle()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </mat-toolbar>
+
+  <!-- Page content -->
+  <div class="container p-3">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
