@@ -15,6 +15,7 @@ const routes: Routes = [
       {path:'add-new-hero', component: AddNewPageComponent},
       {path:'search', component: SearchPageComponent},
       {path:'list', component: ListPageComponent},
+      {path:'edit/:id', component: AddNewPageComponent},
       {path:':id', component: HeroPageComponent},
       {path:'**', redirectTo:'list'}, // La primera vez 'localhost:400/heroes/' redirige a 'list'
     ]

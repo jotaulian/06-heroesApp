@@ -1,1 +1,52 @@
-<p>add-new-page works!</p>
+<h1 class="text-3xl font-bold">Edit / Add Superhero</h1>
+
+<mat-divider class="mb-3"></mat-divider>
+
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <div class="grid">
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Superhero</mat-label>
+            <input type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Alter ego</mat-label>
+            <input type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>First apprearence</mat-label>
+            <input type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Characters</mat-label>
+            <input type="text" matInput required />
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Publisher</mat-label>
+            <mat-select required>
+              <mat-option *ngFor="let publisher of publishers">{{
+                publisher.desc
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <!-- Actions -->
+      <mat-card-actions class="m-2 flex justify-content-between">
+        <button mat-icon-button matTooltip="Delete superhero" color="warn">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-stroked-button color="primary">
+          <mat-icon>save</mat-icon> Save
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <img src="" alt="superhero image" mat-card-image />
+    </mat-card>
+  </div>
+</div>
