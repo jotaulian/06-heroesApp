@@ -13,7 +13,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Bruce Wayne",
       "first_appearance": "Detective Comics #28",
-      "characters": "Bruce Wayne"
+      "characters": "Bruce Wayne",
+      "alt_image": "https://content.eccediciones.com/productos/9569/PORTADA_JPG_WEB_universo_batman.jpg"
     },
     {
       "id": "dc-superman",
@@ -166,6 +167,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "RQISndO",
+      "superhero": "Jotaulian",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Julian Eggle",
+      "first_appearance": "The mistery of the blind dog",
+      "characters": "Lele, Nana",
+      "alt_image": "https://avatars.githubusercontent.com/u/65762943?v=4"
     }
   ]
 }
