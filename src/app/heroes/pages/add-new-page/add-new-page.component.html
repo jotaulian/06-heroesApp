@@ -1,4 +1,6 @@
-<h1 class="text-3xl font-bold">Edit / Add Superhero</h1>
+<h1 class="text-3xl font-bold">
+  {{ currentHero.id ? "Edit" : "Add" }} Superhero
+</h1>
 
 <mat-divider class="mb-3"></mat-divider>
 
@@ -48,16 +50,23 @@
       </mat-card-content>
       <!-- Actions -->
       <mat-card-actions class="m-2 flex justify-content-between">
-        <button mat-icon-button matTooltip="Delete superhero" color="warn">
+        <button
+          mat-icon-button
+          matTooltip="Delete superhero"
+          color="warn"
+          *ngIf="currentHero.id"
+          (click)="onDeleteHero()"
+        >
           <mat-icon>delete</mat-icon>
         </button>
+        <span></span>
         <button mat-stroked-button color="primary" (click)="onSubmit()">
           <mat-icon>save</mat-icon> Save
         </button>
       </mat-card-actions>
     </mat-card>
   </div>
-  <div class="col-12 sm:col-6">
+  <div class="col-12 sm:col-4 md:col-3">
     <mat-card>
       <img
         [src]="currentHero | heroImage"
@@ -67,7 +76,3 @@
     </mat-card>
   </div>
 </div>
-<pre>
-    {{ currentHero | json }}
-    </pre
->
