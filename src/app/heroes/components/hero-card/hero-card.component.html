@@ -1,29 +1,38 @@
 <mat-card appearance="outlined" class="bg-white">
-  <mat-card-header class="text-left">
-    <mat-card-title class="font-bold">{{ hero.superhero }}</mat-card-title>
-    <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
-  </mat-card-header>
   <!-- Image -->
-  <img [src]="hero | heroImage" [alt]="hero.superhero" />
-
-  <!-- Actions -->
-  <mat-card-actions class="m-2">
-    <button
-      mat-stroked-button
-      color="primary"
-      [routerLink]="['/heroes/edit', hero.id]"
-    >
-      <mat-icon>edit</mat-icon> Edit
-    </button>
-    <span class="spacer"> </span>
-    <button
-      mat-raised-button
-      matTooltip="Superhero details"
-      color="primary"
-      class="text-center"
-      [routerLink]="['/heroes', hero.id]"
-    >
-      <mat-icon class="-mr-1">arrow_forward</mat-icon>
-    </button>
-  </mat-card-actions>
+  <div class="grid p-2 md:p-3">
+    <div class="col-fixed" style="width: 150px">
+      <img
+        [src]="hero | heroImage"
+        [alt]="hero.superhero"
+        class="border-round-3xl"
+        width="100%"
+      />
+    </div>
+    <div class="col text-left">
+      <div class="font-bold text-2xl">{{ hero.superhero }}</div>
+      <div class="text-sm">{{ hero.alter_ego }}</div>
+      <div class="text-sm">{{ hero.first_appearance }}</div>
+      <!-- Actions -->
+      <mat-card-actions class="m-2">
+        <button
+          mat-stroked-button
+          color="primary"
+          [routerLink]="['/heroes/edit', hero.id]"
+        >
+          <mat-icon>edit</mat-icon> Edit
+        </button>
+        <span class="spacer"> </span>
+        <button
+          mat-raised-button
+          matTooltip="Superhero details"
+          color="primary"
+          class="text-center"
+          [routerLink]="['/heroes', hero.id]"
+        >
+          <mat-icon class="-mr-1">arrow_forward</mat-icon>
+        </button>
+      </mat-card-actions>
+    </div>
+  </div>
 </mat-card>
